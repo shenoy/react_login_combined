@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "postinstall": "run-s install:backend install:frontend build",
+    "postinstall": "run-p install:backend install:frontend",
     "install:backend": "cd backend && npm install",
     "install:frontend": "cd frontend && npm install",
     "start": "run-p start:backend start:frontend",
@@ -14,7 +14,8 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "npm-run-all": "^4.1.5"
   }
 }
