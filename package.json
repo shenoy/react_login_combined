@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "postinstall": "run-p install:backend install:frontend",
+    "postinstall": "run-s install:backend install:frontend build",
     "install:backend": "cd backend && npm install",
     "install:frontend": "cd frontend && npm install",
     "start": "run-p start:backend start:frontend",
     "start:backend": "npm run start --prefix backend",
     "start:frontend": "npm run start --prefix frontend",
-    "build": "run-s postinstall build:frontend start",
+    "build": " build:frontend start",
     "build:frontend": "cd frontend && npm run build"
   },
   "author": "",
